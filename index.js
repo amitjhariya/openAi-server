@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 if(NODE_ENV==='production'){
-    app.use(express.static(path.join(__dirname, "..", "build")));
+    app.use(express.static(path.join(__dirname, "build")));
     app.use(express.static("public"));
 }
 
