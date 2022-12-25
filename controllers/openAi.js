@@ -15,6 +15,7 @@ export const imageGenerate = async (req, res) => {
             size: imageSize,
         });
         const image_url = response.data.data[0].url;
+        console.log({image_url})
         res.status(200).json({
             success: true,
             data: image_url
